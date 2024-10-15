@@ -7,8 +7,8 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/about" element={<About />} />
+        <Route exact path="kajaw/" element={<Home />} />
+        <Route exact path="kajaw/about" element={<About />} />
       </Routes>
     </Router>
   );
