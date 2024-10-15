@@ -11,6 +11,9 @@
   font-weight: normal;
   font-style: bold;
 }
+html {
+  font-size: 16px;
+}
 
 body {
   margin: 0;
@@ -47,21 +50,21 @@ body {
   justify-content: center;
 }
 .home-title {
-  margin-top: 30px;
+  margin-top: 60px;
   color: #333333;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: "GlacialIndifference", sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 .home-title-left {
   padding-left: 120px;
-  font-size: 2.3em;
+  font-size: 1.5em;
 }
 .home-title-right {
   padding-right: 120px;
-  font-size: 1.5em;
+  font-size: 1.1em;
   display: flex;
   gap: 50px;
 }
@@ -70,6 +73,9 @@ body {
   font-family: "GlacialIndifference", sans-serif;
   font-weight: normal;
   transition: color 0.2s ease, transform 0.2s ease;
+}
+.htr-text.active {
+  text-decoration: underline;
 }
 .htr-text:hover {
   cursor: pointer;
