@@ -75,12 +75,16 @@ body {
   padding-bottom: 60px;
 }
 .home-title-left {
-  padding-left: 370px;
+  padding-left: 330px;
   font-size: 1.5em;
   color: #72330d;
 }
+.home-title-left:hover {
+  cursor: pointer;
+}
+
 .home-title-right {
-  padding-right: 370px;
+  padding-right: 330px;
   font-size: 1em;
   display: flex;
   gap: 16px;
@@ -109,12 +113,12 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding-left: 370px;
-  padding-right: 370px;
+  padding-left: 330px;
+  padding-right: 330px;
   padding-bottom: 40px;
 }
 
 .home-grid-item {
   background-color: #b3a890;
-  height: 260px;
+  height: 320px;
 }

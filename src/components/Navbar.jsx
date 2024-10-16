@@ -18,7 +18,9 @@ export default function Navbar() {
 
   return (
     <div className="home-title">
-      <div className="home-title-left">· kaja mesaric</div>
+      <div className="home-title-left" onClick={navigateToWork}>
+        · kaja mesaric
+      </div>
       <div className="home-title-right">
         <p
           className={`htr-text ${isWorkActive ? "active" : ""}`}
