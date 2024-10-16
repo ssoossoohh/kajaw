@@ -17,65 +17,85 @@ html {
 
 body {
   margin: 0;
-  background-color: #fcfcfa;
+}
+.abt-container {
+  background-color: #dedcd9;
+  height: 100vh;
 }
 
-.abt-container {
+.abt-container-small {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  padding: 0 120px;
+  gap: 45px;
+  padding-left: 120px;
+  padding-right: 120px;
   box-sizing: border-box;
+  padding-top: 50px;
 }
 
 .abt-left {
   background-color: blue;
-  height: 450px;
-  width: 400px;
+  height: 400px;
+  width: 350px;
+  background-image: url("./images/kaja-about.png"); /* Path to your background image */
+  background-size: cover; /* Ensure the image covers the entire div */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  display: flex; /* Flex for layout if needed */
+  flex-direction: column;
 }
 .abt-right {
-  background-color: green;
-  height: 450px;
-  width: 400px;
+  margin: 0;
+  padding: 0;
+  color: #72330d;
+  font-family: "GlacialIndifference", sans-serif;
+  height: 400px;
+  width: 350px;
 }
 
-.home-banner {
-  display: flex;
-  font-family: "GlacialIndifference", sans-serif;
-  height: 10vh;
-  background-color: red;
-  font-size: 30px;
-  align-items: center;
-  justify-content: center;
+.abt-txt {
+  margin-bottom: 30px;
+}
+
+.home-container {
+  background-color: #dedcd9;
 }
 .home-title {
-  margin-top: 60px;
+  background-color: #dedcd9;
+  padding-top: 120px;
   color: #333333;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: "GlacialIndifference", sans-serif;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
 }
 .home-title-left {
-  padding-left: 120px;
+  padding-left: 180px;
   font-size: 1.5em;
+  color: #72330d;
 }
 .home-title-right {
-  padding-right: 120px;
+  padding-right: 180px;
   font-size: 1em;
   display: flex;
-  gap: 50px;
+  gap: 16px;
 }
 
 .htr-text {
   font-family: "GlacialIndifference", sans-serif;
   font-weight: normal;
   transition: color 0.2s ease, transform 0.2s ease;
+  color: #847d77;
 }
 .htr-text.active {
   text-decoration: underline;
+  color: #72330d;
+}
+
+.htr-text.activedot {
+  color: #72330d;
 }
 .htr-text:hover {
   cursor: pointer;
@@ -87,11 +107,11 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: 180px;
+  padding-right: 180px;
 }
 
 .home-grid-item {
-  background-color: #333333;
+  background-color: #b3a890;
   height: 450px;
 }
