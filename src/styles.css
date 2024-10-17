@@ -34,16 +34,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 45px;
-  padding-left: 120px;
-  padding-right: 120px;
+  gap: 3vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
   box-sizing: border-box;
-  padding-top: 50px;
+  padding-top: 6vh;
 }
 
 .abt-left {
-  height: 400px;
-  width: 350px;
+  height: 52vh;
+  width: 23vw;
   background-image: url("./images/kaja-about.png");
   background-size: cover;
   background-position: center;
@@ -54,8 +54,8 @@ body {
 .abt-right {
   color: #72330d;
   font-family: "GlacialIndifference", sans-serif;
-  height: 400px;
-  width: 300px;
+  height: 52vh;
+  width: 23vw;
   box-sizing: border-box;
   margin-top: -40px;
   font-size: 1rem;
@@ -75,7 +75,7 @@ body {
 .home-title {
   background-color: var(--primary-bg-color);
   transition: background-color 0.5s ease;
-  padding-top: 120px;
+  padding-top: 15vh;
   color: #333333;
   display: flex;
   align-items: center;
@@ -84,7 +84,7 @@ body {
   padding-bottom: 60px;
 }
 .home-title-left {
-  padding-left: 330px;
+  padding-left: 22vw;
   font-size: 1.5rem;
   color: var(--primary-text-color);
   transition: color 0.5s ease;
@@ -94,10 +94,10 @@ body {
 }
 
 .home-title-right {
-  padding-right: 330px;
+  padding-right: 22vw;
   font-size: 1rem;
   display: flex;
-  gap: 16px;
+  gap: 1.1vw;
 }
 
 .htr-text {
@@ -127,9 +127,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding-left: 330px;
-  padding-right: 330px;
-  padding-bottom: 40px;
+  padding-left: 22vw;
+  padding-right: 22vw;
+  padding-bottom: 3vw;
 }
 
 .home-grid-item {
@@ -168,10 +168,10 @@ body {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-bottom: 40px;
+  gap: 1.2vw;
+  padding-left: 14vw;
+  padding-right: 14vw;
+  padding-bottom: 2.4vh;
 }
 
 .project-grid-item {
@@ -206,8 +206,8 @@ body {
 
 .project-title {
   font-family: "GlacialIndifference", sans-serif;
-  padding-left: 330px;
-  margin-bottom: 50px;
+  padding-left: 22vw;
+  margin-bottom: 6vh;
   font-size: 1.2rem;
   color: var(--primary-text-color);
 }
