@@ -40,6 +40,7 @@ export default function Navbar({
         <p
           className={`htr-text ${isWorkActive ? "activedot" : ""}`}
           style={{ color: primaryTextColor }}
+          onClick={navigateToWork}
         >
           ·
         </p>
@@ -53,6 +54,7 @@ export default function Navbar({
         <p
           className={`htr-text ${isAboutActive ? "activedot" : ""}`}
           style={{ color: secondaryTextColor }}
+          onClick={navigateToAbout}
         >
           ·
         </p>
