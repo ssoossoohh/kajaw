@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar.jsx";
 import projectOne from "../images/kaja-about.png";
 
+import test1 from "../images/test img1.png";
+import test2 from "../images/test img2.jpeg";
+
 export default function Home() {
   ///tuki bom meu array objectov. vsak object bo vsebovou atribute: coverImage, imagesArray(kle bodo vse ostale slike k se bodo
   /// pol pokazale na project page-u), projectName, projectDesc, projectType
@@ -13,19 +16,61 @@ export default function Home() {
 
   const navigate = useNavigate();
 
-  const objectTemplate = {
-    coverImage: "path/to/cover-image.jpg",
-    images: ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"],
-    projectName: "My Awesome Project",
-    projectDescription: "This is a brief description of my awesome project.",
+  const testObj = {
+    coverImage: test1,
+    images: [
+      test2,
+      test2,
+      test1,
+      test2,
+      test2,
+      test1,
+      test2,
+      test2,
+      test1,
+      test2,
+    ],
+    projectName: "Test Project",
+    projectDescriptionTop: "This is a brief description of my awesome project.",
+    projectDescriptionBottom: "This is bottom text",
     projectType: "Residential",
+    projectBackgroundColor: "#121212",
+    projectPrimaryTextColor: "#f43001",
+    projectSecondaryTextColor: "#aabbcc",
   };
+
+  const testObj2 = {
+    coverImage: test2,
+    images: [
+      test1,
+      test1,
+      test2,
+      test1,
+      test1,
+      test2,
+      test1,
+      test1,
+      test2,
+      test1,
+    ],
+    projectName: "Second Project",
+    projectDescriptionTop: "Top of 2nd",
+    projectDescriptionBottom: "Bottom of 2nd",
+    projectType: "Commercial",
+    projectBackgroundColor: "#8881a2",
+    projectPrimaryTextColor: "#7bbc21",
+    projectSecondaryTextColor: "#3311cc",
+  };
+
+  const projects = [testObj, testObj2];
 
   const [bgColor, setBgColor] = useState("#dedcd9");
   const [primaryTextColor, setPrimaryTextColor] = useState("#72330d");
   const [secondaryTextColor, setSecondaryTextColor] = useState("#847d77"); // Default color
 
-  const navigateToProject = () => {
+  const navigateToProject = (project) => {
+    console.log(project);
+    localStorage.setItem("selectedProject", JSON.stringify(project));
     navigate("/project");
   };
 
@@ -44,7 +89,35 @@ export default function Home() {
         secondaryTextColor={secondaryTextColor}
       />
       <div className="home-grid">
-        <div
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="home-grid-item"
+            onMouseEnter={() => {
+              setBgColor(project.projectBackgroundColor);
+              setPrimaryTextColor(project.projectPrimaryTextColor);
+              setSecondaryTextColor(project.projectSecondaryTextColor);
+            }}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => navigateToProject(project)}
+            style={{ backgroundColor: bgColor }}
+          >
+            <img
+              src={project.coverImage}
+              alt={project.projectName}
+              className="home-grid-item-image"
+            />
+            <div className="project-name" style={{ color: primaryTextColor }}>
+              {project.projectName}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/*      <div
           className="home-grid-item"
           onMouseEnter={() => {
             setBgColor("#ff0000");
@@ -63,13 +136,4 @@ export default function Home() {
           <div className="project-name" style={{ color: primaryTextColor }}>
             project
           </div>
-        </div>
-        <div className="home-grid-item">Rectangle 2</div>
-        <div className="home-grid-item">Rectangle 3</div>
-        <div className="home-grid-item">Rectangle 4</div>
-        <div className="home-grid-item">Rectangle 5</div>
-        <div className="home-grid-item">Rectangle 6</div>
-      </div>
-    </div>
-  );
-}
+        </div> */
