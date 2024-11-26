@@ -16,53 +16,149 @@ export default function Home() {
 
   const navigate = useNavigate();
 
-  const testObj = {
-    coverImage: test1,
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  const babushka = {
+    coverImage: new URL("../images/babushka/babushka_1.png", import.meta.url)
+      .href,
     images: [
-      test2,
-      test2,
-      test1,
-      test2,
-      test2,
-      test1,
-      test2,
-      test2,
-      test1,
-      test2,
+      new URL("../images/babushka/babushka_1.png", import.meta.url),
+      new URL("../images/babushka/babushka_2.png", import.meta.url),
+      new URL("../images/babushka/babushka_3.png", import.meta.url),
+      new URL("../images/babushka/babushka_4.png", import.meta.url),
+      new URL("../images/babushka/babushka_5.png", import.meta.url),
+      new URL("../images/babushka/babushka_6.png", import.meta.url),
+      new URL("../images/babushka/babushka_7.png", import.meta.url),
+      new URL("../images/babushka/babushka_8.png", import.meta.url),
+      new URL("../images/babushka/babushka_9.png", import.meta.url),
     ],
-    projectName: "Test Project",
-    projectDescriptionTop: "This is a brief description of my awesome project.",
-    projectDescriptionBottom: "This is bottom text",
+    projectName: "babushka",
+    projectDescriptionFirst:
+      "For this boutique store offering gourmet products from northern Europe and Asia, I created a monotone background display to give the extravagant and unique product packaging all the freedom to stand out.",
+    projectDescriptionSecond:
+      "The central piece of the boutique is a semicircular island inspired by the peculiar semicircular shape of the retail space.",
     projectType: "Residential",
     projectBackgroundColor: "#121212",
     projectPrimaryTextColor: "#f43001",
     projectSecondaryTextColor: "#aabbcc",
+    projectTextPosition: "6/7",
   };
 
-  const testObj2 = {
-    coverImage: test2,
+  const bloemendaal = {
+    coverImage: new URL(
+      "../images/bloemendaal/bloemendaal_1.png",
+      import.meta.url
+    ),
     images: [
-      test1,
-      test1,
-      test2,
-      test1,
-      test1,
-      test2,
-      test1,
-      test1,
-      test2,
-      test1,
+      new URL("../images/bloemendaal/bloemendaal_1.png", import.meta.url),
+      new URL("../images/bloemendaal/bloemendaal_2.png", import.meta.url),
+      new URL("../images/bloemendaal/bloemendaal_3.png", import.meta.url),
+      new URL("../images/bloemendaal/bloemendaal_4.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
     ],
-    projectName: "Second Project",
-    projectDescriptionTop: "Top of 2nd",
-    projectDescriptionBottom: "Bottom of 2nd",
-    projectType: "Commercial",
-    projectBackgroundColor: "#8881a2",
-    projectPrimaryTextColor: "#7bbc21",
-    projectSecondaryTextColor: "#3311cc",
+    projectName: "bloemendaal",
+    projectDescriptionFirst:
+      "A private home with oversized windows and a high ceilings was a journey of designing a large space with right proportions.",
+    projectDescriptionSecond: "",
+    projectType: "Residential",
+    projectBackgroundColor: "#121212",
+    projectPrimaryTextColor: "#f43001",
+    projectSecondaryTextColor: "#aabbcc",
+    projectTextPosition: "6",
   };
 
-  const projects = [testObj, testObj2];
+  const franciamore = {
+    coverImage: new URL(
+      "../images/franciamore/franciamore_2.png",
+      import.meta.url
+    ),
+    images: [
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/franciamore/franciamore_2.png", import.meta.url),
+      new URL("../images/franciamore/franciamore_3.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/franciamore/franciamore_6.png", import.meta.url),
+      new URL("../images/franciamore/franciamore_7.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+    ],
+    projectName: "franciamore",
+    projectDescriptionFirst:
+      "Casa Franciamore came to be when an idea to turn an old hay storage hut into a two person studio apartment.",
+    projectDescriptionSecond:
+      "Because natural light was scarce, we decided to install a roof window and open up a window to the street that was previously bricked up.",
+    projectType: "Residential",
+    projectBackgroundColor: "#121212",
+    projectPrimaryTextColor: "#f43001",
+    projectSecondaryTextColor: "#aabbcc",
+    projectTextPosition: "6/7",
+  };
+
+  const lassustraat = {
+    coverImage: new URL(
+      "../images/lassustraat/lassustraat_1.png",
+      import.meta.url
+    ),
+    images: [
+      new URL("../images/lassustraat/lassustraat_1.png", import.meta.url),
+      new URL("../images/lassustraat/lassustraat_2.png", import.meta.url),
+      new URL("../images/lassustraat/lassustraat_3.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+    ],
+    projectName: "lassustraat",
+    projectDescriptionFirst:
+      "A bold exploration of patterns and colours  results in a beautiful Amsterdam home for a young family.",
+    projectDescriptionSecond: "",
+    projectType: "Residential",
+    projectBackgroundColor: "#121212",
+    projectPrimaryTextColor: "#f43001",
+    projectSecondaryTextColor: "#aabbcc",
+    projectTextPosition: "6",
+  };
+
+  const azores = {
+    coverImage: new URL("../images/azores/azores_1.png", import.meta.url),
+    images: [
+      new URL("../images/azores/azores_1.png", import.meta.url),
+      new URL("../images/azores/azores_2.png", import.meta.url),
+      new URL("../images/azores/azores_3.png", import.meta.url),
+      new URL("../images/azores/azores_4.png", import.meta.url),
+      new URL("../images/azores/azores_5.png", import.meta.url),
+      new URL("../images/azores/azores_6.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+      new URL("../images/temp-image.png", import.meta.url),
+    ],
+    projectName: "azores",
+    projectDescriptionFirst:
+      "A colourful vacation house that drew the inspiration from the home island of Sao Miguel.",
+    projectDescriptionSecond: "",
+    projectType: "Residential",
+    projectBackgroundColor: "#121212",
+    projectPrimaryTextColor: "#f43001",
+    projectSecondaryTextColor: "#aabbcc",
+    projectTextPosition: "7",
+  };
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  const projects = [babushka, bloemendaal, franciamore, lassustraat, azores];
 
   const [bgColor, setBgColor] = useState("#dedcd9");
   const [primaryTextColor, setPrimaryTextColor] = useState("#72330d");
@@ -107,7 +203,7 @@ export default function Home() {
               alt={project.projectName}
               className="home-grid-item-image"
             />
-            <div className="project-name" style={{ color: primaryTextColor }}>
+            <div className="project-name" style={{ color: secondaryTextColor }}>
               {project.projectName}
             </div>
           </div>
@@ -136,4 +232,31 @@ export default function Home() {
           <div className="project-name" style={{ color: primaryTextColor }}>
             project
           </div>
-        </div> */
+        </div> 
+        
+        
+        const testObj = {
+    coverImage: test1,
+    images: [
+      test2,
+      test2,
+      test1,
+      test2,
+      test2,
+      test1,
+      test2,
+      test2,
+      test1,
+      test2,
+    ],
+    projectName: "test project",
+    projectDescriptionFirst:
+      "This is a brief description of my awesome project.",
+    projectDescriptionSecond: "This is bottom text",
+    projectType: "Residential",
+    projectBackgroundColor: "#121212",
+    projectPrimaryTextColor: "#f43001",
+    projectSecondaryTextColor: "#aabbcc",
+    projectTextPosition: "6",
+  };
+*/

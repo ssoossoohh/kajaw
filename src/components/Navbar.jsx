@@ -35,30 +35,26 @@ export default function Navbar({
           style={{ color: primaryTextColor }}
           onClick={navigateToWork}
         >
-          work
+          work‎ ‎ ‎ ‎ ·
         </p>
-        <p
-          className={`htr-text ${isWorkActive ? "activedot" : ""}`}
-          style={{ color: primaryTextColor }}
-          onClick={navigateToWork}
-        >
-          ·
-        </p>
+
         <p
           className={`htr-text ${isAboutActive ? "active" : ""}`}
           onClick={navigateToAbout}
           style={{ color: secondaryTextColor }}
         >
-          about
-        </p>
-        <p
-          className={`htr-text ${isAboutActive ? "activedot" : ""}`}
-          style={{ color: secondaryTextColor }}
-          onClick={navigateToAbout}
-        >
-          ·
+          about‎ ‎ ‎ ‎ ·
         </p>
       </div>
     </div>
   );
 }
+
+/*
+    <p
+          className={`htr-text ${isWorkActive ? "activedot" : ""}`}
+          style={{ color: primaryTextColor }}
+          onClick={navigateToWork}
+        >
+          ·
+        </p> */

@@ -38,7 +38,7 @@ body {
   padding-left: 15vw;
   padding-right: 15vw;
   box-sizing: border-box;
-  padding-top: 6vh;
+  padding-top: 3.9vh;
 }
 
 .abt-left {
@@ -72,12 +72,14 @@ body {
   position: absolute;
   top: 50%;
   color: white;
-  font-size: 60px;
+  font-size: 35px;
   font-weight: bold;
   cursor: pointer;
   user-select: none;
   padding: 16px;
   margin-top: -22px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .arrow-prev {
@@ -194,10 +196,10 @@ body {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2vw;
-  padding-left: 14vw;
-  padding-right: 14vw;
-  padding-bottom: 2.4vh;
+  gap: 20px;
+  padding-left: 22vw;
+  padding-right: 22vw;
+  padding-bottom: 3vw;
 }
 
 .project-grid-item {
@@ -246,7 +248,7 @@ body {
 
 .project-title {
   font-family: "GlacialIndifferenceBold", sans-serif;
-  padding-left: 22vw;
+  padding-left: 23.7vw;
   margin-bottom: 6vh;
   font-size: 1.2rem;
   color: var(--primary-text-color);
@@ -269,7 +271,7 @@ body {
   max-width: 90%;
   max-height: 90%;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 .modal-content.show {
   opacity: 1;
