@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 export default function Project() {
   const [project, setProject] = useState(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [selectedBigImageIndex, setSelectedBigImageIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isImageChanging, setIsImageChanging] = useState(false);
 
@@ -19,8 +20,33 @@ export default function Project() {
     }
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (isModalOpen) {
+        switch (e.key) {
+          case "ArrowRight":
+            showNextImage();
+            break;
+          case "ArrowLeft":
+            showPrevImage();
+            break;
+          case "Escape":
+            closeModal();
+            break;
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isModalOpen, selectedImageIndex]);
+
   const openModal = (index) => {
     setSelectedImageIndex(index);
+    setSelectedBigImageIndex(project.images[index].bigIndex);
     setIsModalOpen(true);
   };
 
@@ -31,25 +57,43 @@ export default function Project() {
 
   const showNextImage = () => {
     if (selectedImageIndex !== null && project) {
-      const nextIndex = (selectedImageIndex + 1) % project.images.length;
+      let nextIndex = selectedImageIndex;
+      do {
+        nextIndex = (nextIndex + 1) % project.images.length;
+      } while (
+        project.images[nextIndex].bigIndex ===
+        project.images[selectedImageIndex].bigIndex
+      );
+      console.log(nextIndex);
+      console.log(project.images[nextIndex].bigIndex);
+
       setIsImageChanging(true);
       setTimeout(() => {
         setSelectedImageIndex(nextIndex);
+        setSelectedBigImageIndex(project.images[nextIndex].bigIndex);
+
         setIsImageChanging(false);
-      }, 300);
+      }, 400);
     }
   };
 
   const showPrevImage = () => {
     if (selectedImageIndex !== null && project) {
-      const prevIndex =
-        (selectedImageIndex - 1 + project.images.length) %
-        project.images.length;
+      let prevIndex = selectedImageIndex;
+      do {
+        prevIndex =
+          (prevIndex - 1 + project.images.length) % project.images.length;
+      } while (
+        project.images[prevIndex].bigIndex ===
+        project.images[selectedImageIndex].bigIndex
+      );
+
       setIsImageChanging(true);
       setTimeout(() => {
         setSelectedImageIndex(prevIndex);
+        setSelectedBigImageIndex(project.images[prevIndex].bigIndex);
         setIsImageChanging(false);
-      }, 300);
+      }, 400);
     }
   };
 
@@ -83,7 +127,7 @@ export default function Project() {
           {firstImagesArray.map((image, index) => (
             <div key={index} className="project-grid-item">
               <img
-                src={image}
+                src={image.url}
                 alt={`Project Image ${index + 1}`}
                 className="project-grid-item-image"
                 onClick={() => openModal(index)}
@@ -105,7 +149,7 @@ export default function Project() {
             otherImagesArray.map((image, index) => (
               <div key={index} className="project-grid-item">
                 <img
-                  src={image}
+                  src={image.url}
                   alt={`Project Image ${index + 1}`}
                   className="project-grid-item-image"
                   onClick={() => openModal(index + 5)}
@@ -117,7 +161,7 @@ export default function Project() {
             otherImagesArray.map((image, index) => (
               <div key={index} className="project-grid-item">
                 <img
-                  src={image}
+                  src={image.url}
                   alt={`Project Image ${index + 1}`}
                   className="project-grid-item-image"
                   onClick={() => openModal(index + 6)}
@@ -141,7 +185,7 @@ export default function Project() {
 
               <img
                 className={`modal-content ${isImageChanging ? "" : "show"}`}
-                src={project.images[selectedImageIndex]}
+                src={project.bigImages[selectedBigImageIndex]}
                 alt={`Full Image ${selectedImageIndex + 1}`}
               />
 
