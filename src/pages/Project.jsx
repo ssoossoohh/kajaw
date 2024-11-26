@@ -136,7 +136,7 @@ export default function Project() {
                   showPrevImage();
                 }}
               >
-                &#8249;
+                &#10229;
               </span>
 
               <img
@@ -152,7 +152,7 @@ export default function Project() {
                   showNextImage();
                 }}
               >
-                &#8250;
+                &#10230;
               </span>
             </div>
           )}
