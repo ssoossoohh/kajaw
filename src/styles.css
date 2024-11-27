@@ -12,7 +12,7 @@
   font-style: bold;
 }
 :root {
-  --primary-bg-color: #dedcd9;
+  --primary-bg-color: #f7f7f7;
   --primary-text-color: #72330d;
   --secondary-text-color: #847d77;
 }
@@ -23,7 +23,7 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--primary-bg-color);
+  background-color: #f7f7f7;
 }
 .abt-container {
   background-color: #dedcd9;

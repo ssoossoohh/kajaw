@@ -88,9 +88,9 @@ export default function Home() {
     projectDescriptionSecond:
       "The central piece of the boutique is a semicircular island inspired by the peculiar semicircular shape of the retail space.",
     projectType: "Residential",
-    projectBackgroundColor: "#121212",
-    projectPrimaryTextColor: "#f43001",
-    projectSecondaryTextColor: "#aabbcc",
+    projectBackgroundColor: "#3c394a",
+    projectPrimaryTextColor: "#b19994",
+    projectSecondaryTextColor: "#e3dfff",
     projectTextPosition: "6/7",
   };
 
@@ -157,9 +157,9 @@ export default function Home() {
       "A private home with oversized windows and a high ceilings was a journey of designing a large space with right proportions.",
     projectDescriptionSecond: "",
     projectType: "Residential",
-    projectBackgroundColor: "#121212",
-    projectPrimaryTextColor: "#f43001",
-    projectSecondaryTextColor: "#aabbcc",
+    projectBackgroundColor: "#69584d",
+    projectPrimaryTextColor: "#871903",
+    projectSecondaryTextColor: "#b0a084",
     projectTextPosition: "6",
   };
 
@@ -237,9 +237,9 @@ export default function Home() {
     projectDescriptionSecond:
       "Because natural light was scarce, we decided to install a roof window and open up a window to the street that was previously bricked up.",
     projectType: "Residential",
-    projectBackgroundColor: "#121212",
-    projectPrimaryTextColor: "#f43001",
-    projectSecondaryTextColor: "#aabbcc",
+    projectBackgroundColor: "#cc3521",
+    projectPrimaryTextColor: "#dea47e",
+    projectSecondaryTextColor: "#2a6126",
     projectTextPosition: "6/7",
   };
 
@@ -304,9 +304,9 @@ export default function Home() {
       "A bold exploration of patterns and colours  results in a beautiful Amsterdam home for a young family.",
     projectDescriptionSecond: "",
     projectType: "Residential",
-    projectBackgroundColor: "#121212",
-    projectPrimaryTextColor: "#f43001",
-    projectSecondaryTextColor: "#aabbcc",
+    projectBackgroundColor: "#b8bdae",
+    projectPrimaryTextColor: "#ffeedb",
+    projectSecondaryTextColor: "#b75b44",
     projectTextPosition: "6",
   };
 
@@ -355,9 +355,9 @@ export default function Home() {
       "A colourful vacation house that drew the inspiration from the home island of Sao Miguel.",
     projectDescriptionSecond: "",
     projectType: "Residential",
-    projectBackgroundColor: "#121212",
-    projectPrimaryTextColor: "#f43001",
-    projectSecondaryTextColor: "#aabbcc",
+    projectBackgroundColor: "#f0c907",
+    projectPrimaryTextColor: "#fff1d0",
+    projectSecondaryTextColor: "#dd1c1a",
     projectTextPosition: "7",
   };
 
@@ -369,7 +369,7 @@ export default function Home() {
 
   const projects = [babushka, bloemendaal, franciamore, lassustraat, azores];
 
-  const [bgColor, setBgColor] = useState("#dedcd9");
+  const [bgColor, setBgColor] = useState("#f7f7f7;");
   const [primaryTextColor, setPrimaryTextColor] = useState("#72330d");
   const [secondaryTextColor, setSecondaryTextColor] = useState("#847d77"); // Default color
 
@@ -384,7 +384,7 @@ export default function Home() {
 
   const handleMouseLeave = () => {
     // Reset to default color when not hovering
-    setBgColor("#dedcd9");
+    setBgColor("#f7f7f7");
     setPrimaryTextColor("#72330d");
     setSecondaryTextColor("#847d77");
   };
