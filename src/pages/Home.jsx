@@ -112,43 +112,49 @@ export default function Home() {
           "../images/bloemendaal/bloemendaal_2.png",
           import.meta.url
         ),
-        bigIndex: 1,
+        bigIndex: 0,
       },
       {
         url: new URL(
           "../images/bloemendaal/bloemendaal_3.png",
           import.meta.url
         ),
-        bigIndex: 2,
+        bigIndex: 1,
       },
       {
         url: new URL(
           "../images/bloemendaal/bloemendaal_4.png",
           import.meta.url
         ),
+        bigIndex: 2,
+      },
+      {
+        url: new URL("../images/temp-image.png", import.meta.url),
         bigIndex: 3,
       },
       {
         url: new URL("../images/temp-image.png", import.meta.url),
-        bigIndex: 4,
+        bigIndex: 3,
       },
       {
         url: new URL("../images/temp-image.png", import.meta.url),
-        bigIndex: 4,
+        bigIndex: 3,
       },
       {
         url: new URL("../images/temp-image.png", import.meta.url),
-        bigIndex: 4,
-      },
-      {
-        url: new URL("../images/temp-image.png", import.meta.url),
-        bigIndex: 4,
+        bigIndex: 3,
       },
     ],
     bigImages: [
-      new URL("../images/bloemendaal/bloemendaal_1.png", import.meta.url),
-      new URL("../images/bloemendaal/bloemendaal_2.png", import.meta.url),
-      new URL("../images/bloemendaal/bloemendaal_3.png", import.meta.url),
+      new URL(
+        "../images/bloemendaal/bigImages/bloemendaal_big_1.png",
+        import.meta.url
+      ),
+      new URL(
+        "../images/bloemendaal/bigImages/bloemendaal_big_2.png",
+        import.meta.url
+      ),
+
       new URL("../images/bloemendaal/bloemendaal_4.png", import.meta.url),
       new URL("../images/temp-image.png", import.meta.url),
     ],
@@ -158,7 +164,7 @@ export default function Home() {
     projectDescriptionSecond: "",
     projectType: "Residential",
     projectBackgroundColor: "#69584d",
-    projectPrimaryTextColor: "#871903",
+    projectPrimaryTextColor: "#702516",
     projectSecondaryTextColor: "#b0a084",
     projectTextPosition: "6",
   };
@@ -238,8 +244,8 @@ export default function Home() {
       "Because natural light was scarce, we decided to install a roof window and open up a window to the street that was previously bricked up.",
     projectType: "Residential",
     projectBackgroundColor: "#cc3521",
-    projectPrimaryTextColor: "#dea47e",
-    projectSecondaryTextColor: "#2a6126",
+    projectPrimaryTextColor: "#2a6126",
+    projectSecondaryTextColor: "#dea47e",
     projectTextPosition: "6/7",
   };
 
@@ -369,7 +375,7 @@ export default function Home() {
 
   const projects = [babushka, bloemendaal, franciamore, lassustraat, azores];
 
-  const [bgColor, setBgColor] = useState("#f7f7f7;");
+  const [bgColor, setBgColor] = useState("#fffcfa");
   const [primaryTextColor, setPrimaryTextColor] = useState("#72330d");
   const [secondaryTextColor, setSecondaryTextColor] = useState("#847d77"); // Default color
 
@@ -384,7 +390,7 @@ export default function Home() {
 
   const handleMouseLeave = () => {
     // Reset to default color when not hovering
-    setBgColor("#f7f7f7");
+    setBgColor("#fffcfa");
     setPrimaryTextColor("#72330d");
     setSecondaryTextColor("#847d77");
   };

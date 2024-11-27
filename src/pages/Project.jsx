@@ -9,6 +9,9 @@ export default function Project() {
   const [selectedBigImageIndex, setSelectedBigImageIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isImageChanging, setIsImageChanging] = useState(false);
+  const [bgColor, setBgColor] = useState(null);
+  const [primaryTextColor, setPrimaryTextColor] = useState(null);
+  const [secondaryTextColor, setSecondaryTextColor] = useState(null);
 
   let firstImagesArray = [];
   let otherImagesArray = [];
@@ -16,7 +19,11 @@ export default function Project() {
   useEffect(() => {
     const storedProject = localStorage.getItem("selectedProject");
     if (storedProject) {
-      setProject(JSON.parse(storedProject));
+      const parsedProject = JSON.parse(storedProject);
+      setProject(parsedProject);
+      setBgColor(parsedProject.projectBackgroundColor);
+      setPrimaryTextColor(parsedProject.projectPrimaryTextColor);
+      setSecondaryTextColor(parsedProject.projectSecondaryTextColor);
     }
   }, []);
 
@@ -100,7 +107,6 @@ export default function Project() {
   if (!project) {
     return <div>Loading project data...</div>;
   }
-
   if (
     project.projectTextPosition === "6" ||
     project.projectTextPosition === "6/7"
@@ -120,9 +126,15 @@ export default function Project() {
 
   return (
     <div>
-      <Navbar />
-      <div className="project-container">
-        <div className="project-title">{project.projectName}</div>
+      <Navbar
+        bgColor={bgColor}
+        primaryTextColor={primaryTextColor}
+        secondaryTextColor={secondaryTextColor}
+      />
+      <div className="project-container" style={{ backgroundColor: bgColor }}>
+        <div className="project-title" style={{ color: secondaryTextColor }}>
+          {project.projectName}{" "}
+        </div>
         <div className="project-grid">
           {firstImagesArray.map((image, index) => (
             <div key={index} className="project-grid-item">
@@ -134,12 +146,18 @@ export default function Project() {
               />
             </div>
           ))}
-          <div className="project-grid-item-text">
+          <div
+            className="project-grid-item-text"
+            style={{ color: secondaryTextColor }}
+          >
             {project.projectDescriptionFirst}
           </div>
 
           {project.projectTextPosition === "6/7" && (
-            <div className="project-grid-item-text">
+            <div
+              className="project-grid-item-text"
+              style={{ color: secondaryTextColor }}
+            >
               {project.projectDescriptionSecond}
             </div>
           )}
