@@ -20,7 +20,7 @@ export default function About() {
 
           <p className="abt-txt">kjmesaric@gmail.com</p>
 
-          <p>+31 645179256</p>
+          <p className="abt-txt">+31 645179256</p>
         </div>
       </div>
     </div>

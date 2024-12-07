@@ -280,6 +280,30 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+  .abt-container-small {
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .abt-left,
+  .abt-right {
+    width: 90vw;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .abt-left {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .abt-right {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+
   .home-container {
     transition: background-color 0.5s ease;
     min-height: 100vh;
@@ -292,22 +316,31 @@ body {
     align-items: center;
     justify-content: space-between;
     font-family: "GlacialIndifference", sans-serif;
+    padding-bottom: 3vh;
   }
   .home-title-left {
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     color: #72330d;
     transition: color 0.5s ease;
+    padding-left: 5.5vw;
   }
 
   .home-title-right {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     display: flex;
     gap: 4vw;
+    padding-right: 5.5vw;
+  }
+
+  .home-grid-item:hover {
+    background-color: #fffcfa;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
   }
 
   .home-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding-left: 10vw;
     padding-right: 10vw;
@@ -322,5 +355,73 @@ body {
     justify-content: center;
     position: relative;
     aspect-ratio: 1 / 1.18;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-left: 11vw;
+    padding-right: 11vw;
+    padding-bottom: 3vw;
+  }
+
+  .project-grid-item {
+    background-color: #fffcfa;
+    transition: background-color 0.5s ease;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    aspect-ratio: 1 / 1.18;
+  }
+  .project-grid-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .project-grid-item-image:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+  }
+
+  .project-grid-item-text {
+    font-family: "GlacialIndifference", sans-serif;
+    line-height: 1.3;
+    text-align: justify;
+    color: #72330d;
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+    aspect-ratio: 1 / 1.18;
+  }
+
+  .project-name {
+    font-family: "GlacialIndifference", sans-serif;
+    font-size: 1.2em;
+    color: #72330d;
+    opacity: 0;
+    transition: opacity 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+  }
+
+  .project-title {
+    font-family: "GlacialIndifferenceBold", sans-serif;
+    padding-left: 11vw;
+    margin-bottom: 7vw;
+    font-size: 1rem;
+    color: #72330d;
+  }
+
+  .arrow-prev,
+  .arrow-next {
+    opacity: 0;
   }
 }
