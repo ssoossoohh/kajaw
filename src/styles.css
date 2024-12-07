@@ -342,8 +342,8 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 11vw;
+    padding-right: 11vw;
     padding-bottom: 3vw;
   }
   .home-grid-item {
