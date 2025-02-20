@@ -38,7 +38,7 @@ body {
 .abt-left {
   width: 23vw; /* Width is relative to viewport width */
   padding-top: 43.48%; /* Aspect ratio of 3:4, change it according to your image's aspect ratio */
-  background-image: url("./images/kaja-about.png");
+  background-image: url("./images/kaja-about.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

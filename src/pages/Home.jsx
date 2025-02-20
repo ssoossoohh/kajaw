@@ -2,10 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Navbar from "../components/Navbar.jsx";
-import projectOne from "../images/kaja-about.png";
-
-import test1 from "../images/test img1.png";
-import test2 from "../images/test img2.jpeg";
+import projectOne from "../images/kaja-about.jpg";
 
 export default function Home() {
   ///tuki bom meu array objectov. vsak object bo vsebovou atribute: coverImage, imagesArray(kle bodo vse ostale slike k se bodo
@@ -23,58 +20,58 @@ export default function Home() {
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   const babushka = {
-    coverImage: new URL("../images/babushka/babushka_1.png", import.meta.url)
+    coverImage: new URL("../images/babushka/babushka_1.jpg", import.meta.url)
       .href,
     images: [
       {
-        url: new URL("../images/babushka/babushka_1.png", import.meta.url),
+        url: new URL("../images/babushka/babushka_1.jpg", import.meta.url),
         bigIndex: 0,
       },
       {
-        url: new URL("../images/babushka/babushka_2.png", import.meta.url),
+        url: new URL("../images/babushka/babushka_2.jpg", import.meta.url),
         bigIndex: 1,
       },
       {
-        url: new URL("../images/babushka/babushka_3.png", import.meta.url),
+        url: new URL("../images/babushka/babushka_3.jpg", import.meta.url),
         bigIndex: 1,
       },
       {
-        url: new URL("../images/babushka/babushka_4.png", import.meta.url),
+        url: new URL("../images/babushka/babushka_4.jpg", import.meta.url),
         bigIndex: 2,
       },
       {
-        url: new URL("../images/babushka/babushka_5.png", import.meta.url),
+        url: new URL("../images/babushka/babushka_5.jpg", import.meta.url),
         bigIndex: 2,
       },
       {
-        url: new URL("../images/babushka/babushka_6.png", import.meta.url),
+        url: new URL("../images/babushka/babushka_6.jpg", import.meta.url),
         bigIndex: 3,
       },
       {
-        url: new URL("../images/babushka/babushka_7.png", import.meta.url),
+        url: new URL("../images/babushka/babushka_7.jpg", import.meta.url),
         bigIndex: 3,
       },
       {
-        url: new URL("../images/babushka/babushka_8.png", import.meta.url),
+        url: new URL("../images/babushka/babushka_8.jpg", import.meta.url),
         bigIndex: 4,
       },
       {
-        url: new URL("../images/babushka/babushka_9.png", import.meta.url),
+        url: new URL("../images/babushka/babushka_9.jpg", import.meta.url),
         bigIndex: 4,
       },
     ],
     bigImages: [
-      new URL("../images/babushka/babushka_1.png", import.meta.url),
+      new URL("../images/babushka/babushka_1.jpg", import.meta.url),
       new URL(
         "../images/babushka/bigImages/babushka_big_1.jpeg",
         import.meta.url
       ),
       new URL(
-        "../images/babushka/bigImages/babushka_big_2.png",
+        "../images/babushka/bigImages/babushka_big_2.jpg",
         import.meta.url
       ),
       new URL(
-        "../images/babushka/bigImages/babushka_big_3.png",
+        "../images/babushka/bigImages/babushka_big_3.jpg",
         import.meta.url
       ),
       new URL(
@@ -96,34 +93,34 @@ export default function Home() {
 
   const bloemendaal = {
     coverImage: new URL(
-      "../images/bloemendaal/bloemendaal_1.png",
+      "../images/bloemendaal/bloemendaal_1.jpg",
       import.meta.url
     ),
     images: [
       {
         url: new URL(
-          "../images/bloemendaal/bloemendaal_1.png",
+          "../images/bloemendaal/bloemendaal_1.jpg",
           import.meta.url
         ),
         bigIndex: 0,
       },
       {
         url: new URL(
-          "../images/bloemendaal/bloemendaal_2.png",
+          "../images/bloemendaal/bloemendaal_2.jpg",
           import.meta.url
         ),
         bigIndex: 0,
       },
       {
         url: new URL(
-          "../images/bloemendaal/bloemendaal_3.png",
+          "../images/bloemendaal/bloemendaal_3.jpg",
           import.meta.url
         ),
         bigIndex: 1,
       },
       {
         url: new URL(
-          "../images/bloemendaal/bloemendaal_4.png",
+          "../images/bloemendaal/bloemendaal_4.jpg",
           import.meta.url
         ),
         bigIndex: 2,
@@ -147,11 +144,11 @@ export default function Home() {
     ],
     bigImages: [
       new URL(
-        "../images/bloemendaal/bigImages/bloemendaal_big_1.png",
+        "../images/bloemendaal/bigImages/bloemendaal_big_1.jpg",
         import.meta.url
       ),
       new URL(
-        "../images/bloemendaal/bigImages/bloemendaal_big_2.png",
+        "../images/bloemendaal/bigImages/bloemendaal_big_2.jpg",
         import.meta.url
       ),
 
@@ -171,7 +168,7 @@ export default function Home() {
 
   const franciamore = {
     coverImage: new URL(
-      "../images/franciamore/franciamore_2.png",
+      "../images/franciamore/franciamore_2.jpg",
       import.meta.url
     ),
     images: [
@@ -181,14 +178,14 @@ export default function Home() {
       },
       {
         url: new URL(
-          "../images/franciamore/franciamore_2.png",
+          "../images/franciamore/franciamore_2.jpg",
           import.meta.url
         ),
         bigIndex: 1,
       },
       {
         url: new URL(
-          "../images/franciamore/franciamore_3.png",
+          "../images/franciamore/franciamore_3.jpg",
           import.meta.url
         ),
         bigIndex: 1,
@@ -203,14 +200,14 @@ export default function Home() {
       },
       {
         url: new URL(
-          "../images/franciamore/franciamore_6.png",
+          "../images/franciamore/franciamore_6.jpg",
           import.meta.url
         ),
         bigIndex: 2,
       },
       {
         url: new URL(
-          "../images/franciamore/franciamore_7.png",
+          "../images/franciamore/franciamore_7.jpg",
           import.meta.url
         ),
         bigIndex: 3,
@@ -231,11 +228,11 @@ export default function Home() {
     bigImages: [
       new URL("../images/temp-image.png", import.meta.url),
       new URL(
-        "../images/franciamore/bigImages/franciamore_big_1.png",
+        "../images/franciamore/bigImages/franciamore_big_1.jpg",
         import.meta.url
       ),
-      new URL("../images/franciamore/franciamore_6.png", import.meta.url),
-      new URL("../images/franciamore/franciamore_7.png", import.meta.url),
+      new URL("../images/franciamore/franciamore_6.jpg", import.meta.url),
+      new URL("../images/franciamore/franciamore_7.jpg", import.meta.url),
     ],
     projectName: "franciamore",
     projectDescriptionFirst:
@@ -251,27 +248,27 @@ export default function Home() {
 
   const lassustraat = {
     coverImage: new URL(
-      "../images/lassustraat/lassustraat_1.png",
+      "../images/lassustraat/lassustraat_1.jpg",
       import.meta.url
     ),
     images: [
       {
         url: new URL(
-          "../images/lassustraat/lassustraat_1.png",
+          "../images/lassustraat/lassustraat_1.jpg",
           import.meta.url
         ),
         bigIndex: 0,
       },
       {
         url: new URL(
-          "../images/lassustraat/lassustraat_2.png",
+          "../images/lassustraat/lassustraat_2.jpg",
           import.meta.url
         ),
         bigIndex: 0,
       },
       {
         url: new URL(
-          "../images/lassustraat/lassustraat_3.png",
+          "../images/lassustraat/lassustraat_3.jpg",
           import.meta.url
         ),
         bigIndex: 0,
@@ -299,7 +296,7 @@ export default function Home() {
     ],
     bigImages: [
       new URL(
-        "../images/lassustraat/bigImages/lassustraat_big_1.png",
+        "../images/lassustraat/bigImages/lassustraat_big_1.jpg",
         import.meta.url
       ),
       new URL("../images/temp-image.png", import.meta.url),
@@ -317,30 +314,30 @@ export default function Home() {
   };
 
   const azores = {
-    coverImage: new URL("../images/azores/azores_1.png", import.meta.url),
+    coverImage: new URL("../images/azores/azores_1.jpg", import.meta.url),
     images: [
       {
-        url: new URL("../images/azores/azores_1.png", import.meta.url),
+        url: new URL("../images/azores/azores_1.jpg", import.meta.url),
         bigIndex: 0,
       },
       {
-        url: new URL("../images/azores/azores_2.png", import.meta.url),
+        url: new URL("../images/azores/azores_2.jpg", import.meta.url),
         bigIndex: 0,
       },
       {
-        url: new URL("../images/azores/azores_3.png", import.meta.url),
+        url: new URL("../images/azores/azores_3.jpg", import.meta.url),
         bigIndex: 0,
       },
       {
-        url: new URL("../images/azores/azores_4.png", import.meta.url),
+        url: new URL("../images/azores/azores_4.jpg", import.meta.url),
         bigIndex: 0,
       },
       {
-        url: new URL("../images/azores/azores_5.png", import.meta.url),
+        url: new URL("../images/azores/azores_5.jpg", import.meta.url),
         bigIndex: 0,
       },
       {
-        url: new URL("../images/azores/azores_6.png", import.meta.url),
+        url: new URL("../images/azores/azores_6.jpg", import.meta.url),
         bigIndex: 0,
       },
       {
@@ -353,7 +350,7 @@ export default function Home() {
       },
     ],
     bigImages: [
-      new URL("../images/azores/bigImages/azores_big_1.png", import.meta.url),
+      new URL("../images/azores/bigImages/azores_big_1.jpg", import.meta.url),
       new URL("../images/temp-image.png", import.meta.url),
     ],
     projectName: "azores",
