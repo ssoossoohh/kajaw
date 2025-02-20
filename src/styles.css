@@ -36,23 +36,24 @@ body {
 }
 
 .abt-left {
-  height: 52vh;
-  width: 23vw;
+  width: 23vw; /* Width is relative to viewport width */
+  padding-top: 43.48%; /* Aspect ratio of 3:4, change it according to your image's aspect ratio */
   background-image: url("./images/kaja-about.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  position: relative; /* Ensure the background image is positioned correctly */
 }
+
 .abt-right {
   color: #72330d;
   font-family: "GlacialIndifference", sans-serif;
-  height: 52vh;
-  width: 20vw;
+  width: 23vw; /* Width is relative to viewport width */
+
   box-sizing: border-box;
-  margin-top: -40px;
-  font-size: 1rem;
+  font-size: 1vw;
 }
 
 .abt-txt {
@@ -185,6 +186,12 @@ body {
   cursor: pointer;
 }
 
+.project-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -218,7 +225,7 @@ body {
   line-height: 1.3;
   text-align: justify;
   color: #72330d;
-  font-size: 1rem;
+  font-size: 1.4vw;
   display: flex;
   align-items: center;
   aspect-ratio: 1 / 1.18;
@@ -226,7 +233,7 @@ body {
 
 .project-name {
   font-family: "GlacialIndifference", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.35vw;
   color: #72330d;
   opacity: 0;
   transition: opacity 0.5s;
